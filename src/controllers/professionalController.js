@@ -46,12 +46,10 @@ export const getProfessionalById = async (req, res) => {
       res.status(404).json({ error: 'Professional not found' });
     }
   } catch (error) {
-    res
-      .status(400)
-      .json({
-        error: 'Not possible getProfessionalById',
-        details: error.message,
-      });
+    res.status(400).json({
+      error: 'Not possible getProfessionalById',
+      details: error.message,
+    });
   }
 };
 
