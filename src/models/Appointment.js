@@ -35,9 +35,9 @@ const Appointment = sequelize.define('Appointment', {
 });
 
 Appointment.associate = (models) => {
-  Appointment.belongsTo(models.Customer, { foreignKey: 'customerid' });
+  Appointment.belongsTo(models.Customer, { foreignKey: 'customerId' });
   Appointment.belongsTo(models.Service, { foreignKey: 'serviceId' });
-  Appointment.belongsTo(models.Professional, { foreignKey: 'professionalid' });
+  Appointment.belongsTo(models.Professional, { foreignKey: 'professionalId' });
 };
 
 return Appointment;
