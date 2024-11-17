@@ -1,6 +1,6 @@
 import DataTypes from 'sequelize';
-import sequelize from '../database/config.js';
 
+export default (sequelize) => {
 const Supplier = sequelize.define('Supplier', {
 
     id: {
@@ -23,4 +23,5 @@ const Supplier = sequelize.define('Supplier', {
 
 });
 
-export default Supplier;
+return Supplier;
+};
