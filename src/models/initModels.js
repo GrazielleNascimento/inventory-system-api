@@ -10,21 +10,21 @@ import defineProfessional from '../models/Professional.js';
 
 // Inicializa os modelos
 const models = {
-    Product: defineProduct(sequelize),
-    Category: defineCategory(sequelize),
-    Supplier: defineSupplier(sequelize),
-    Customer: defineCustomer(sequelize),
-    Service: defineService(sequelize),
-    Appointment: defineAppointment(sequelize),
-    Stock: defineStock(sequelize),
-    Professional: defineProfessional(sequelize),
+  Product: defineProduct(sequelize),
+  Category: defineCategory(sequelize),
+  Supplier: defineSupplier(sequelize),
+  Customer: defineCustomer(sequelize),
+  Service: defineService(sequelize),
+  Appointment: defineAppointment(sequelize),
+  Stock: defineStock(sequelize),
+  Professional: defineProfessional(sequelize),
 };
 
 // Configura as associações
 Object.keys(models).forEach((modelName) => {
-    if (models[modelName].associate) {
-        models[modelName].associate(models);
-    }
+  if (models[modelName].associate) {
+    models[modelName].associate(models);
+  }
 });
 
 export { models, sequelize };

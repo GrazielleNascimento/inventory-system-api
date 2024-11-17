@@ -1,5 +1,11 @@
 import express from 'express';
-import { createProfessional, getProfessionals, getProfessionalById, updateProfessional, deleteProfessional } from '../controllers/professionalController.js';
+import {
+  createProfessional,
+  getProfessionals,
+  getProfessionalById,
+  updateProfessional,
+  deleteProfessional,
+} from '../controllers/professionalController.js';
 
 const router = express.Router();
 
