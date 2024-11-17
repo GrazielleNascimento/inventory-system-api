@@ -1,6 +1,7 @@
 import { DataTypes } from 'sequelize';
 import sequelize from '../database/config.js';
 
+export default (sequelize) => {
 const Stock = sequelize.define('Stock', {
   id: {
     type: DataTypes.INTEGER,
@@ -40,4 +41,5 @@ Stock.associate = (models) => {
   Stock.belongsTo(models.Product, { foreignKey: 'productId' });
 };
 
-export default Stock;
+return Stock;
+};
