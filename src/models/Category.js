@@ -1,7 +1,6 @@
 import { DataTypes } from 'sequelize';
-import sequelize from "../database/config.js";
 
-
+export default (sequelize) => {
 const Category = sequelize.define('Category', {
     id: {
         type: DataTypes.INTEGER,
@@ -24,4 +23,6 @@ Category.associate = (models) => {
     Category.hasMany(models.Product, {foreignKey: 'categoryId'});
 };
 
-export default Category;
+return Category;
+
+};
