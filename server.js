@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 //import cors from 'cors';
 import sequelize from './src/database/config.js';
 //import swaggerConfig from './src/
-import professionalRoutes from './src/routes/professionalRoutes.js';
+import professionalRoutes from './src/routes/professionalRouter.js';
 
 const app = express();
 const port = process.env.PORT || 3000;
