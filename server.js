@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 //import cors from 'cors';
 import sequelize from './src/database/config.js';
-//import swaggerConfig from './src/
+import swaggerSetup from './src/docs/swaggerDocs.js';
 import professionalRoutes from './src/routes/professionalRouter.js';
 
 const app = express();
@@ -17,10 +17,18 @@ app.use(bodyParser.json());
     credentials: true
 })) */
 
-//swaggerConfig(app);
+// Swagger documentation
+swaggerSetup(app);
 
 // Rotas da API
 app.use('/api', professionalRoutes);
+/* app.use('/api', productRoutes);
+app.use('/api', appointmentRoutes);
+app.use('/api', serviceRoutes);
+app.use('/api', supplierRoutes);
+app.use('/api', customerRoutes);
+app.use('/api', stockRoutes);
+app.use('/api', categoryRoutes); */
 
 app.get('/', (req, res) => {
   res.send('Welcome to the API');
