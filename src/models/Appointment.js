@@ -1,6 +1,7 @@
 import { DataTypes } from 'sequelize';
 import sequelize from '../database/config.js';
 
+export default (sequelize) => {
 const Appointment = sequelize.define('Appointment', {
   id: {
     type: DataTypes.INTEGER,
@@ -39,4 +40,5 @@ Appointment.associate = (models) => {
   Appointment.belongsTo(models.Professional, { foreignKey: 'professionalid' });
 };
 
-export default Appointment;
+return Appointment;
+}
