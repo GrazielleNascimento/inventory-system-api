@@ -1,6 +1,7 @@
 import { DataTypes } from 'sequelize';
 import sequelize from '../database/config.js';
 
+export default (sequelize) => {
 const Customer = sequelize.define('Customer', {
   id: {
     type: DataTypes.INTEGER,
@@ -28,5 +29,5 @@ const Customer = sequelize.define('Customer', {
 Customer.associate = (models) => {
   Customer.hasMany(models.Appointment, { foreignKey: 'customerId' });
 };
-
-export default Customer;
+return Customer;
+};
