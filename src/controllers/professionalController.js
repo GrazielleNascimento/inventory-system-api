@@ -2,7 +2,19 @@ import { models } from '../models/initModels.js';
 
 export const createProfessional = async (req, res) => {
   try {
-    const { name, email, phone, address, category } = req.body;
+    const {
+      name,
+      email,
+      phone,
+      address,
+      profession,
+      experience,
+      rating,
+      price,
+      availability,
+      description,
+      image,
+    } = req.body;
     const newProfessional = await models.Professional.create({
       name,
       email,
