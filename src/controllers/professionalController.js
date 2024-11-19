@@ -1,4 +1,4 @@
-import { models } from '../models/initModels.js';
+/* import { models } from '../models/initModels.js';
 
 export const createProfessional = async (req, res) => {
   try {
@@ -139,3 +139,4 @@ export const deleteProfessional = async (req, res) => {
     });
   }
 };
+ */

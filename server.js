@@ -3,7 +3,8 @@ import bodyParser from 'body-parser';
 //import cors from 'cors';
 import sequelize from './src/database/config.js';
 import swaggerSetup from './src/docs/swaggerDocs.js';
-import professionalRoutes from './src/routes/professionalRouter.js';
+//import professionalRoutes from './src/routes/professionalRouter.js';
+import productRoutes from './src/routes/productRouter.js';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -21,9 +22,9 @@ app.use(bodyParser.json());
 swaggerSetup(app);
 
 // Rotas da API
-app.use('/api', professionalRoutes);
-/* app.use('/api', productRoutes);
-app.use('/api', appointmentRoutes);
+//app.use('/api', professionalRoutes);
+app.use('/api', productRoutes);
+/*app.use('/api', appointmentRoutes);
 app.use('/api', serviceRoutes);
 app.use('/api', supplierRoutes);
 app.use('/api', customerRoutes);

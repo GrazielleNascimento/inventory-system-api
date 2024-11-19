@@ -1,4 +1,4 @@
-import express from 'express';
+/* import express from 'express';
 import {
   createProfessional,
   getProfessionals,
@@ -16,3 +16,4 @@ router.put('/professional/:id', updateProfessional);
 router.delete('/professional/:id', deleteProfessional);
 
 export default router;
+ */

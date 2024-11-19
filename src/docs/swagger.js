@@ -23,11 +23,11 @@ const swaggerDocument = {
   info: {
     title: 'Inventory System API',
     version: '1.0.0',
-    description: 'API documentation for the Inventory System'
+    description: 'API documentation for the Inventory System',
   },
   paths: {
     ...productDocument.paths,
-/*     ...categoryDocument.paths,
+    /*     ...categoryDocument.paths,
     ...supplierDocument.paths,
     ...customerDocument.paths,
     ...serviceDocument.paths,
@@ -38,15 +38,15 @@ const swaggerDocument = {
   components: {
     schemas: {
       ...productDocument.components?.schemas,
-     /*  ...categoryDocument.components?.schemas,
+      /*  ...categoryDocument.components?.schemas,
       ...supplierDocument.components?.schemas,
       ...customerDocument.components?.schemas,
       ...serviceDocument.components?.schemas,
       ...appointmentDocument.components?.schemas,
       ...stockDocument.components?.schemas,
       ...professionalDocument.components?.schemas, */
-    }
-  }
+    },
+  },
 };
 
 // Função para configurar o Swagger no app Express
