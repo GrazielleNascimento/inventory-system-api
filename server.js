@@ -1,15 +1,14 @@
 import express from 'express';
-import bodyParser from 'body-parser';
 //import cors from 'cors';
 import sequelize from './src/database/config.js';
-import swaggerSetup from './src/docs/swaggerDocs.js';
+import swaggerSetup from './src/docs/swagger.js';
 //import professionalRoutes from './src/routes/professionalRouter.js';
 import productRoutes from './src/routes/productRouter.js';
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(bodyParser.json());
+app.use(express.json());
 
 /* app.use(cors({
     origin: 'http://localhost:5500',
